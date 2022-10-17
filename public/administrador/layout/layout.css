@@ -1,0 +1,10 @@
+.contenedor_layout_administrador {
+    margin-left: 300px;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    .contenedor_layout_administrador {
+        margin-left: 0px;
+    }
+}
