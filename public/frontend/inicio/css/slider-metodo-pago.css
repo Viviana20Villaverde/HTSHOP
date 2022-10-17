@@ -1,0 +1,38 @@
+#conten-metodopago-carrusel{
+    border: 5PX;
+    height: 200PX;
+    overflow: hidden;
+}
+.metodo-pago-carrusel{
+
+height: 100%;
+position: relative;
+}
+.tarjeta-carrusel{
+
+    height: 100%;
+}
+.flecha-carrusel{
+
+    height: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+#tarjetaCarrusel-1{
+    background-color: aqua;
+}
+#tarjetaCarrusel-2{
+    background-color: rgb(189, 45, 189);
+}
+#tarjetaCarrusel-3{
+    background-color: rgb(83, 194, 39);
+}
+a{
+    text-decoration: none;
+}

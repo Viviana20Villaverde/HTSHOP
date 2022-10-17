@@ -1,0 +1,111 @@
+.llamada-accion{
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "llamada-imagen llamada-texto";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    background: #009eff;
+}
+.llamada-imagen{
+    grid-area: llamada-imagen;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+
+}
+.llamada-texto{
+    grid-area: llamada-texto;
+    padding: 50px;
+
+}
+/**/
+.llamada-accion .llamada-imagen img{
+    padding: 0px 0px;
+}
+.llamada-texto h2{
+    font-size: 50px;
+    color: #ffff;
+    font-weight: 700px;
+
+}
+.llamada-texto p{
+    font-size: 25px;
+    color: #ffff;
+    font-weight: 700px;
+}
+
+/*.boton-registrate{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}*/
+.boton-registrate button{
+    background: #ffa03d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight:bold;
+    color: #ffff;
+    width:300px;
+    height:80px;
+    margin:20px;
+
+}
+.boton-registrate button:hover{
+    background: #009eff;
+}
+.llamada-imagen img{
+    width: 700px;
+}
+.llamada-logo img{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+
+}
+@media (max-width: 900px) {
+    .llamada-accion {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "llamada-imagen"
+            "llamada-texto";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 100px;
+    }
+
+    .llamada-accion form {
+        flex-direction: column;
+    }
+
+    .llamada-accion form {
+        width: 100%;
+    }
+
+    .llamada-imagen,
+    .llamada-texto {
+        padding: 15px;
+    }
+
+    .llamada-texto h2{
+        font-size: 30px;
+
+    }
+    .llamada-texto p{
+        font-size: 15px;
+
+    }
+    .boton-registrate button{
+
+        padding: 10px 20px;
+        font-size: 20px;
+
+        width:200px;
+        height:60px;
+        margin:10px;
+
+    }
+}
