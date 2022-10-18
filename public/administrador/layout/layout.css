@@ -1,0 +1,91 @@
+.contenedor_layout_administrador {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.titulo_pagina {
+    font-size: 24px;
+    color: #282828;
+    font-weight: 600;
+}
+
+.contenedor_formulario {
+    padding: 10px 0px;
+}
+
+.contenedor_elemento_formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+}
+
+.contenedor_elemento_formulario label {
+    color: #282828;
+    font-weight: 500;
+}
+
+.contenedor_elemento_formulario code {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.contenedor_formulario_checkbox label {
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.contenedor_formulario_imagen img {
+    margin-bottom: 8px;
+}
+
+.formulario_boton_imagen {
+    background-color: #009eff;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.contenedor_formulario_imagen img {
+    height: 150px;
+}
+
+.contenedor_formulario_imagen label {
+    margin-right: 5px;
+    font-weight: 400;
+    color: white;
+}
+
+.formulario_boton_enviar {
+    margin: 8px 0px;
+    background-color: #ffa03d;
+    color: white;
+    cursor: pointer;
+    padding: 8px 8px;
+    border-radius: 50px;
+}
+
+.formulario_boton_enviar input {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.tabla_controles{
+    cursor: pointer;
+}
+
+/*Estilos lista ckeditor5 */
+.ck.ck-content ul,
+.ck.ck-content ul li{
+  list-style-type: inherit;
+}
+
+.ck.ck-content ul {
+  padding-left: 40px;
+}
+/*Fin Estilos lista ckeditor5 */
+
+@media (max-width: 900px) {
+    .contenedor_layout_administrador {
+        margin-left: 0px;
+    }
+}

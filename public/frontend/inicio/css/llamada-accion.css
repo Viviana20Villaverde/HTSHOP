@@ -1,0 +1,101 @@
+.contenedor_llamada_accion {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "llamada_imagen llamada_texto";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    background: #009eff;
+    margin: 50px 0px;
+}
+
+/*Llamada imagen*/
+.contenedor_llamada_accion .llamada_imagen {
+    grid-area: llamada_imagen;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contenedor_llamada_accion .llamada_imagen img {
+    width: 700px;
+}
+
+/*Fin llamada imagen*/
+/*Llamada texto*/
+.contenedor_llamada_accion .llamada_texto {
+    grid-area: llamada_texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor_llamada_accion .llamada_texto_logo {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_llamada_accion .llamada_texto_logo img {
+    width: 200px;
+}
+
+.contenedor_llamada_accion .llamada_texto h2 {
+    font-size: 38px;
+    color: #ffff;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 20px 0px;
+}
+
+.contenedor_llamada_accion .llamada_texto p {
+    font-size: 25px;
+    color: #ffff;
+    line-height: 26px;
+}
+
+.contenedor_llamada_accion .boton_registrate button {
+    background: #ffa03d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
+    margin-top: 20px;
+}
+
+.contenedor_llamada_accion .boton_registrate button:hover {
+    background: white;
+    color: #ffa03d;
+}
+
+/*Fin llamada texto*/
+
+@media (min-width: 1300px) {
+    .contenedor_llamada_accion .llamada_texto {
+        padding-right: 250px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .contenedor_llamada_accion .llamada_texto {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor_llamada_accion {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+            "llamada_imagen"
+            "llamada_texto";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .contenedor_llamada_accion .boton_registrate {
+        display: flex;
+        justify-content: center;
+    }
+}

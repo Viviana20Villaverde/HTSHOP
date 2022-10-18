@@ -1,0 +1,371 @@
+**************************03/10/22***************************************
+
+composer create-project laravel/laravel htdentshop
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git init
+git add .
+git commit -m "Iniciando Ecommerce"
+git log
+git remote add origin https://github.com/Viviana20Villaverde/HTSHOP.git
+git push origin master
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*****************************************************************
+
+->Comentamos en .gitignore.
+
+php artisan serve
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run dev
+
+->Configurar el .env con la base de datos mysql.
+->Crear la base de datos en phpmyadmin.
+
+php artisan migrate
+
+*****************************************************************
+
+->Comentar los campos de User y los campos de entrada.
+php artisan make:model Administrador -msfc
+
+php artisan migrate
+php artisan make:livewire Administrador/PaginaPerfilAdministrador
+
+php artisan migrate:fresh --seed
+
+->cambiar en .env el filesystems la ruta, public
+php artisan storage:link
+
+*****************************************************************
+php artisan make:model Cliente -msfc
+
+php artisan migrate
+php artisan make:livewire Cliente/PaginaPerfilCliente
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 3_Slider_Iconos_Metodo_Pago
+git branch
+git status
+
+git add .
+git commit -m "Avance slider iconos y metodos de pago"
+git push origin 3_Slider_Iconos_Metodo_Pago
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************04/10/22***************************************
+
+->Creamos la ruta Administrador
+->Configurar en RouteServiceProvider
+
+https://spatie.be/docs/laravel-permission/v5/introduction
+composer require spatie/laravel-permission
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+->Relación Permission y Roles con User
+php artisan migrate
+php artisan migrate:fresh --seed
+
+php artisan make:seeder UserSeeder
+
+*****************************************************************
+
+php artisan make:seeder RolSeeder
+php artisan make:controller Administrador/RolController -r
+
+composer require laravelcollective/html
+
+php artisan make:controller Administrador/PermisoController -r
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 2_Roles_Permisos
+git branch
+git status
+
+git add .
+git commit -m "Creación de Roles y Permisos"
+git push origin 2_Roles_Permisos
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************04/10/22***************************************
+
+PS C:\xampp\htdocs> git clone https://github.com/Mersmith/htdent_shop.git
+composer install
+npm install
+
+php artisan make:middleware AdministradorMiddleware
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 3_Protegiendo_Rutas
+git branch
+git status
+
+git add .
+git commit -m "Protegiendo Rutas Privadas con Administrador"
+git push origin 3_Protegiendo_Rutas
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+**************************05/10/22***************************************
+
+php artisan make:livewire Administrador/PaginaAdministradorAdministrador
+
+php artisan make:controller Administrador/AdministradorController -r
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 4_Roles_Permisos_Admin
+git branch
+git status
+
+git add .
+git commit -m "Agregar Roles y Permisos a Administradores"
+git push origin 4_Roles_Permisos_Admin
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+->Modificar FortifyServiceProvider
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 5_Creando_Administradores
+git branch
+git status
+
+git add .
+git commit -m "Creando Administradores y redirigiendo rutas de los perfiles"
+git push origin 5_Creando_Administradores
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************06/10/22***************************************
+
+php artisan make:controller Frontend/InicioController
+->Creamos layout de Frontend y Administrador
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 6_Layout_Admin_Front
+git branch
+git status
+
+git add .
+git commit -m "Creando Layouts de Administrador y Frontend"
+git push origin 6_Layout_Admin_Front
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************06/10/22***************************************
+
+->Crear menu principal
+php artisan make:livewire Frontend/Menu/MenuPrincipal
+php artisan make:livewire Frontend/Menu/MenuCarrito
+
+->https://www.convertsimple.com/convert-javascript-to-json/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 7_Menu_Principal_1
+git branch
+git status
+
+git add .
+git commit -m "Avance Menu Principal"
+git push origin 7_Menu_Principal_1
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************08/10/22***************************************
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 8_Menu_Principal_2
+git branch
+git status
+
+git add .
+git commit -m "Termine de crear el menu principal del frontend con AlpineJS"
+git push origin 8_Menu_Principal_2
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************10/10/22***************************************
+php artisan make:model Slider -m
+php artisan migrate
+php artisan make:seeder SliderSeeder
+
+->Crar las migraciones y modelos para productos
+
+->m:migración, s: seeder cantidad de registros, c: controlador, f: factories
+php artisan make:model Categoria -ms
+php artisan make:model Subcategoria -ms
+
+php artisan make:model Marca -mfs
+php artisan make:migration create_categoria_marca_table
+
+->Crea la migración, el modelo y factories
+php artisan make:model Producto -msf
+
+php artisan make:model Color -ms
+php artisan make:migration create_color_producto_table
+
+php artisan make:model Medida -mf
+php artisan make:migration create_color_medida_table
+
+php artisan make:model Imagen -mf
+
+php artisan make:factory CategoriaFactory
+
+php artisan make:factory SubcategoriaFactory
+
+php artisan make:seeder ColorProductoSeeder
+php artisan make:seeder MedidaSeeder
+php artisan make:model ColorMedida
+php artisan make:model ColorProducto
+
+php artisan make:seeder ColorMedidaSeeder
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+public const BASE_URL = 'https://placehold.jp';  // cambie la URL
+
+curl_setopt($ch, CURLOPT_FILE, $fp); //línea existente
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);//nueva línea
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//nueva línea
+$success = curl_exec($ch) && curl_getinfo($ch, CURLINFO_HTTP_CODE) === 200;//línea existente
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Frontend/Productos/SliderProducto
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 9_Slider_Migraciones_Productos
+git branch
+git status
+
+git add .
+git commit -m "Termine de crear el slider de pagina Inicio y Migraciones Producto"
+git push origin 9_Slider_Migraciones_Productos
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************11/10/22***************************************
+
+php artisan make:livewire Administrador/Menu/MenuPrincipal
+->Slider Producto
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 10_Slider_Producto
+git branch
+git status
+
+git add .
+git commit -m "Termine Slider Producto y un poco de Menu Principal Administrador"
+git push origin 10_Slider_Producto
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************12/10/22***************************************
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 11_Slider_Producto_Menu_Administrador
+git branch
+git status
+
+git add .
+git commit -m "Termine Slider Producto y el Menu Administrador"
+git push origin 11_Slider_Producto_Menu_Administrador
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************13/10/22***************************************
+->Reordene las carpetas
+
+php artisan make:controller Administrador\CategoriaController
+
+php artisan make:livewire Administrador/Categoria/PaginaCategoriaAdministrador
+
+->Pagina Categorias
+->Slider Testimonios
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 12_Slider_Testimonio_Pagina_Categoria
+git branch
+git status
+
+git add .
+git commit -m "Termine Slider Testimonios y la Pagina Administrador Categorias"
+git push origin 12_Slider_Testimonio_Pagina_Categoria
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************14/10/22***************************************
+php artisan make:livewire Administrador/Subcategoria/PaginaSubcategoriaAdministrador
+->Subcategoria
+php artisan make:livewire Administrador/Marca/PaginaMarcaAdministrador
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 13_Pagina_administrador_Subcategoria_Marca
+git branch
+git status
+
+git add .
+git commit -m "Termine Pagina Subcategoria y Marca"
+git push origin 13_Pagina_administrador_Subcategoria_Marca
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************15/10/22***************************************
+->Producto
+php artisan make:livewire Administrador/Producto/PaginaCrearProductoAdministrador
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 14_Pagina_administrador_Crear_Producto_1
+git branch
+git status
+
+git add .
+git commit -m "Avance de pagina crear producto"
+git push origin 14_Pagina_administrador_Crear_Producto_1
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**************************16/10/22***************************************
+->Pie pagina
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 15_Pie_Pagina
+git branch
+git status
+
+git add .
+git commit -m "Pie pagina"
+git push origin 15_Pie_Pagina
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+php artisan make:livewire Administrador/Producto/PaginaTodosProductoAdministrador
+php artisan make:livewire Administrador/Producto/PaginaEditarProductoAdministrador
+php artisan make:controller Administrador/ProductoController
+
+php artisan make:livewire Administrador/Producto/ComponenteVariaMedida
+php artisan make:livewire Administrador/Producto/ComponenteVariaMedidaColor
+php artisan make:livewire Administrador/Producto/ComponenteVariaColor
+php artisan make:livewire Administrador/Producto/ComponenteEstadoProducto
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 16_Crear_Producto
+git branch
+git status
+
+git add .
+git commit -m "Crear producto, listar"
+git push origin 16_Crear_Producto
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git checkout -b 17_Llamada_accion_inicio
+git branch
+git status
+
+git add .
+git commit -m "Llamada acción inicio"
+git push origin 17_Llamada_accion_inicio
+->Click en boton Merge pull request
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

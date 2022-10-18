@@ -1,0 +1,96 @@
+.contenedor_slider_metodo_pago{
+    padding: 100px 0px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    background: #009eff;
+    margin: 50px 0px;
+  }
+  .slider_metodo_pago_item i{
+    font-size: 130px;
+    color:white;
+  }
+  .slider_metodo_pago_item:hover i {
+    color: #ffa03d;
+  }
+
+
+
+  .contenedor_slider_metodo_pago {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 1300px;
+  }
+
+  .contenedor_slider_metodo_pago_items {
+    display: flex;
+    width: 300%;
+  }
+  .contenedor_slider_metodo_pago_items img {
+ width: 150px;
+  }
+  .slider_metodo_pago_item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider_metodo_pago_item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #666666;
+  }
+
+  .slider_metodo_pago_item h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+
+
+  .slider_metodo_pago_item p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .slider_metodo_pago_boton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 30%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider_metodo_pago_boton i {
+    color: #ffa03d;
+    font-size: 40px;
+  }
+
+  .slider_metodo_pago_boton:hover i {
+    color: white;
+  }
+
+  #boton_izquierdo_slider_metodo_pago {
+    left: 10px;
+  }
+
+  #boton_derecho_slider_metodo_pago {
+    right: 10px;
+  }

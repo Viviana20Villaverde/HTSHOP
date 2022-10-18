@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "nombrePrincipal": "Perfil",
+    "nombrePrincipalUrl": "perfil",
+    "subMenu1": []
+  },
+  {
+    "id": 2,
+    "nombrePrincipal": "Roles",
+    "nombrePrincipalUrl": "#",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "Roles",
+        "nombreSubMenu1Url": "rol"
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "Permisos",
+        "nombreSubMenu1Url": "permiso"
+      },
+      {
+        "id": 3,
+        "nombreSubMenu1": "Administradores",
+        "nombreSubMenu1Url": "administrador"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombrePrincipal": "Categorias",
+    "nombrePrincipalUrl": "categoria",
+    "subMenu1": []
+  },
+  {
+    "id": 4,
+    "nombrePrincipal": "Marca",
+    "nombrePrincipalUrl": "marca",
+    "subMenu1": []
+  },
+  {
+    "id": 5,
+    "nombrePrincipal": "Producto",
+    "nombrePrincipalUrl": "producto",
+    "subMenu1": [
+      {
+        "id": 1,
+        "nombreSubMenu1": "Todos los productos",
+        "nombreSubMenu1Url": "producto"
+      },
+      {
+        "id": 2,
+        "nombreSubMenu1": "Crear producto",
+        "nombreSubMenu1Url": "producto/crear"
+      }
+    ]
+  }
+]
